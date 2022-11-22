@@ -1,0 +1,32 @@
+<!DOCTYPE html >
+< html >
+< script  src =" https://aframe.io/releases/1.0.4/aframe.min.js " > </ script >
+<!-- importiamo la versione arjs senza NFT ma con supporto marker + location based -->
+< script  src =" https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js " > </ script >
+
+< testa >
+    < link  rel =" foglio di stile " href =" styles/styles.css " >
+    < link  rel =" foglio di stile " href =" https://fonts.googleapis.com/css?family=Poppins " >
+</ capo >
+
+< corpo >
+
+    < button  class =" button " > Info </ button >
+
+    < a-scene  vr-mode-ui =" enabled: false " arjs incorporato  >
+
+        < a-marker  type =" pattern " url =" patterns/pattern-marker.patt " >
+            < a-entità
+            posizione =" 0 0 0 "
+            scala =" 4 4 4 "
+            obj-model =" obj: url(/media/dama.obj);mtl: url(/media/dama.mtl); "
+            animation =" proprietà: rotazione; dur: 6000; to: 0 360 0; loop: true; easing: linear; "
+            >  </ a-entità >
+        </ a-marker >
+
+        < telecamera a-entity  > </ a-entity >
+
+    </ una scena >
+
+</ corpo >
+</ html >
